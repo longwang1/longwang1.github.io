@@ -1,306 +1,162 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	
-<head>
-<meta charset="UTF-8">
-<title>Long Wang's Homepage</title>
-
-<!-- Here is the CSS Style for this webpage -->
-	
-<style>
-body
-{
- background-color:#FBFBFB;
- margin:0px auto;
- padding:0px;
- font-family:helvetica;
- height:2000px;
-}
-h1
-{
- text-align:center;
- font-size:60px;
- margin-top:10px;
- color:#040700;
-}
-h1 p
-{
- text-align:center;
- margin:0px;
- font-size:18px;
- text-decoration:underline;
- color:white;
-}
-#main_content
-{
- margin-top:50px;
- width:1100px;
- margin-left:100px;
-}
-#main_content li
-{
- display:inline;
- list-style-type:none;
- background-color:#7E856D;
- padding:15px;
- border-radius:5px 5px 0px 0px;
- color:#292A0A;
- font-weight:bold;
- cursor:pointer;
-}
-#main_content li.notselected
-{
- background-color:#7E856D;
- color:#292A0A;	
-}
-#main_content li.selected
-{
- background-color:#4D29E6;
- color:#F3E974;	
-}
-#main_content .hidden_desc
-{
- display:none;
- visibility:hidden;
-}
-#main_content #page_content
-{
- background-color:#F3F5F0;
- padding:10px;
- margin-top:9px;
- border-radius:0px 5px 5px 5px;
- color:#2E2E2E;
- line-height: 1.6em;
- word-spacing:4px;
-}	
-	</style>
-
-	
-<!-- Here is the code to control the multi-tabs -->
-	
-<script>
- function change_tab(id)
- {
-   document.getElementById("page_content").innerHTML=document.getElementById(id+"_desc").innerHTML;
-   document.getElementById("page1").className="notselected";
-   document.getElementById("page2").className="notselected";
-   document.getElementById("page3").className="notselected";
-   document.getElementById("page4").className="notselected";
-   document.getElementById("page5").className="notselected";
-   document.getElementById("page6").className="notselected";
-   document.getElementById(id).className="selected";
- }
-</script>
-	
+<head><meta charset="UTF-8">
+	<title>REASONS Lab</title>
+	<meta name="viewport" content="width=device-width"><meta name="keywords" content=""><meta name="description" content="">
+	<link href="css/style.css" rel="stylesheet" type="text/css" /><script type="text/javascript" src="js/jquery.js"></script><script type="text/javascript" src="js/script.js"></script><script type="text/javascript" src="js/jquery.smoothscroll.js"></script><script type="text/javascript" src="js/jquery.scrollshow.js"></script><script type="text/javascript" src="js/jquery.rollover.js"></script><script type="text/javascript" src="js/jquery.slidewide.js"></script><script>
+$(function($){
+	if ($('#spMenu').css('display') == 'block') {
+		$('html').smoothscroll({easing : 'swing', speed : 1000, margintop : 10, headerfix : $('header')});
+	} else {
+		$('html').smoothscroll({easing : 'swing', speed : 1000, margintop : 10, headerfix : $('nav')});
+	}
+	$('.totop').scrollshow({position : 500});
+	$('.slide').slidewide({
+		touch         : true,
+		touchDistance : '80',
+		autoSlide     : true,
+		repeat        : true,
+		interval      : 5000,
+		duration      : 500,
+		easing        : 'swing',
+		imgHoverStop  : true,
+		navHoverStop  : true,
+		prevPosition  : 0,
+		nextPosition  : 0,
+		viewSlide     : 1,
+		baseWidth     : 980,
+		navImg        : false,
+		navImgCustom  : false,
+		navImgSuffix  : ''
+	});
+	$('.slidePrev img').rollover();
+	$('.slideNext img').rollover();
+	});
+</script><!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/css3-mediaqueries.js"></script>
+<![endif]-->
 </head>
-
-	
 <body>
-	
-<div id="main_content">
+<header>
+<div class="inner">
+<h1><a href="index.html"><img align="middle" alt="REASONS logo" src="images/REASONS_Logo.png" width="200px" /></a></h1>
 
-<!-- The title "Long Wang" -->	
-<div>
-<table width="100%" border="0">
-  <tbody>
-    <tr>
-      <th scope="col"><h1>Long Wang</h1>
-      </th>
-    </tr>
-  </tbody>
-</table>
-	</div>
-	
-<!-- The picture and the personal information -->	
-<div>
-<table width="100%" border="0">
-  <tbody>
-    <tr>
-      <th scope="col"><img src="BYWH0016_small.JPG" width="200" height="209" alt=""/></th>
-      <th scope="col"><h2>Tenured Associate Professor<br>
-        Institute for Network Sciences and Cyberspace<br>
-        Tsinghua University<br> </h2>
-     <h3>   Email: longwang@tsinghua.edu.cn<br>
-        Phone: +86-10-62603270 (please email first)<br>
-        Address: Room 3-212, FIT Building, Tsinghua University, Beijing, 100084, China<br>
-		  </h3>
-      </th>
-    </tr>
-  </tbody>
-</table>
+<p class="summary" style="font-size:25px" align="middle"><b><u>RE</u>liability <u>A</u>nd <u>S</u>ecurity <u>O</u>f <u>N</u>etworks and <u>S</u>ystems Lab <br> (REASONS)</b></p>
 </div>
-	
-<!-- Main contents in multiple tabs -->	
-<div>
- <p>
-	<br>
-	</p>
+<!-- /.inner --></header>
 
-<!-- tabs -->
- <li class="selected" id="page1" onclick="change_tab(this.id);">HOME</li>
- <li class="notselected" id="page2" onclick="change_tab(this.id);">PUBLICATIONS</li>
- <li class="notselected" id="page3" onclick="change_tab(this.id);">STUDENTS</li>
- <li class="notselected" id="page4" onclick="change_tab(this.id);">COURSES</li>
- <li class="notselected" id="page5" onclick="change_tab(this.id);">SOFTWARE</li>
- <li class="notselected" id="page6" onclick="change_tab(this.id);">ACTIVITIES</li>
-
-<!-- tab contents -->
- <div class='hidden_desc' id="page1_desc">
-  <h2>About Me</h2>
-     I am Long Wang (王龙), a tenured associated professor at Tsinghua University. 
-	 I am leading the REliability And Security Of Networks and Systems 
-	 (<a href="https://reasons-lab.github.io" target="_blank">REASONS</a>) lab. 
-	 My research areas focus on resiliency, security and understanding of systems, services 
-	 and networks, especially when they are complicated, intelligent, autonomous, dynamic 
-	 and/or software-defined. My homepage at Tsinghua University (in Chinese) is 
-	 <a href="https://www.insc.tsinghua.edu.cn/info/1181/1326.htm" target="_blank">here</a>. 
- </div>
-
-	
- <div class='hidden_desc' id="page2_desc">
-  <h2>Refereed Journals and Book Chapters</h2>
-* indicates I am the (co-)corresponding author or (co-)first author of the paper<br>
-[1]	“How Far Have We Come in Detecting Anomalies in Distributed Systems? One Empirical Study and One Step Further,” Yong Yang, Yifan Wu, Karthik Pattabiraman, Long Wang*, Ying Li, submitted to IEEE Transactions on Dependable and Secure Computing (TDSC).<br>
-[2]	"Transparently Capturing Execution Path of Service Request Processing for Anomaly Detection,” Yong Yang, Long Wang*, Jing Gu, Ying Li, submitted to IEEE Transactions on Service Computing (TSC). <br>
-[3]	“Compliance on Critical Computing Systems – from Reference Architecture to Case Studies,” Long Wang*, 2019 China Report on Development and Frontier of Cyberspace Security (System Security), People's Posts and Telecommunications Press, China, 2020.<br>
-[4]	"LADRA: Log-based abnormal task detection and root-cause analysis in big data processing with Spark," Siyang Lu, Xiang Wei, Bingbing Rao, Byungchul Tak, Long Wang, Liqiang Wang, Future Generation Computer Systems Journal (FGCS), Volume 95, June 2019.<br>
-[5]	“Failure Diagnosis for Distributed Systems using Targeted Fault Injection,” Cuong Pham, Long Wang*, Byung Chul Tak, Salman Baset, Chunqiang Tang, Zbigniew Kalbarczyk, Ravishankar K. Iyer, IEEE Transactions on Parallel and Distributed Systems (TPDS), Volume: 28, Issue: 2, Feb. 2017.<br>
-[6]	"Public Cloud Service Agreements: What to Expect and What to Negotiate" (book), Claude Baudoin, Long Wang, Jordan Flynn, John Meegan, et al., Cloud Standards Customer Council，Aug. 2016.<br>
-[7]	“A Methodology for Continuous Evaluation of Cloud Resiliency,” Xiaoyong Yuan, Long Wang*, Tiancheng Liu, Yue Zhang, American Journal of Engineering and Applied Sciences (AJEAS), 2016.<br>
-[8]	“VM-μCheckpoint: Design, Modeling, and Assessment of Lightweight In-Memory VM Checkpointing,” Long Wang*, Zbigniew Kalbarczyk, Ravishankar K. Iyer, Arun Iyengar, IEEE Transactions on Dependable and Secure Computing (TDSC), vol.12, no. 2, 2015.<br>
-[9]	“Toward Achieving Operational Excellence in a Cloud,” Salman A. Baset, Long Wang*, Byung Chul Tak, Chuong Pham, Chunqiang Tang, IBM Journal of Research and Development, Volume 58, Issue 2, 2014.<br>
-[10]	“Reliability MicroKernel: Providing Application-Aware Reliability in OS,” Long Wang*, Zbigniew Kalbarczyk, Weining Gu, Ravishankar K. Iyer, IEEE Transactions on Reliability (TR), Vol. 56, No. 4, Dec. 2007 (invited paper).<br>
-[11]	“Application Fault Tolerance Employing ARMOR Middleware,” Zbigniew Kalbarczyk, Ravishankar K. Iyer, Long Wang, IEEE Internet Computing, Vol 9, Issue 2, 2005.<br>
-
-<h2>Proceedings of Refereed Conferences</h2>
-[12]	"Iteratively Checking Program Properties Involving Non-Boolean Values," Long Wang*, The Int’l Conference on Dependable Systems and Networks (DSN), Fast Abstract, 2021. <br>
-[13]	"Scheduling Physical Machine Maintenance on Qualified Clouds: What if Migration is not Allowed?," Long Wang*, Harigovind V Ramasamy, Richard Harper, The IEEE Int’l Conference on Cloud Computing (CLOUD), 2020.<br>
-[14]	"How Far Have We Come in Detecting Anomalies in Distributed Systems? An Empirical Study with a Statement-Level Fault Injection Method", Yong Yang, Yifan Wu, Karthik Pattabiraman, Long Wang*, Ying Li, IEEE International Symposium on Software Reliability Engineering (ISSRE), 2020.<br>
-[15]	"System Restore in a Multi-Cloud Data Pipeline Platform," Long Wang*, Harigovind V Ramasamy, Valentina Salapura, et al., The Int’l Conference on Dependable Systems and Networks (DSN), Industry Track, 2019.<br>
-[16]	"Transparently Capturing Execution Path of Service/Job Request Processing,” Yong Yang, Long Wang*, Jing Gu, Ying Li. International Conference on Service-Oriented Computing (ICSOC) 2018. Lecture Notes in Computer Science, vol 11236.<br>
-[17]	"KEREP: Experience in Extracting Knowledge on Distributed System Behavior through Request Execution Path," Jing Gu, Long Wang*, Yong Yang and Ying Li, Best Paper Nominee, IEEE International Symposium on Software Reliability Engineering (ISSRE), Industry Track, 2018.<br>
-[18]	“DevOps Practices for Building Secure and Resilient Cloud-Native Web Applications,” Long Wang*, Harigovind V Ramasamy, Richard Harper, Ruchi Mahindru, The Int’l Conference on Dependable Systems and Networks (DSN), Tutorial, 2018.<br>
-[19]	"Planning, Building, and Managing Resiliency on the Cloud," Harigovind V Ramasamy, Long Wang and Richard Harper, ACM Symposium on Operating Systems Principles (SOSP) Tutorial, 2017.<br>
-[20]	"Log-based Abnormal Task Detection and Root Cause Analysis for Spark," Siyang Lu, Bingbing Rao, Xiang Wei, Byungchul Tak, Long Wang, Liqiang Wang, IEEE International Conference on Web Services (ICWS), 2017.<br>
-[21]	“Providing Resiliency to Orchestration and Automation Engines in Hybrid Cloud,” Long Wang*, Harigovind V Ramasamy, Alexei Karve, Richard Harper, The Int’l Conference on Dependable Systems and Networks (DSN), Industry Track, 2017.<br>
-[22]	“Predicting Misconfiguration-induced Unsuccessful Executions of Jobs in Big Data System,” Hongyan Tang, Ying Li, Long Wang, Jing Gu, Zhonghai Wu, IEEE Computer Society Signature Conference on Computers, Software and Applications (COMPSAC), 2017.<br>
-[23]	“Disaster Recovery for Cloud-Hosted Enterprise Applications,” Long Wang*, Richard Harper, Ruchi Mahindru, Harigovind V Ramasamy, The IEEE Int’l Conference on Cloud Computing (CLOUD), San Francisco, USA, 2016.<br>
-[24]	"Auto-tuning Performance of MPI Parallel Programs Using Resource Management in Container-Based Virtual Cloud," Hongyi Ma, Liqiang Wang, Byung Chul Tak, Long Wang, Chunqiang Tang, The IEEE Int’l Conference on Cloud Computing (CLOUD), San Francisco, USA, 2016.<br>
-[25]	“Activating Protection and Exercising Recovery Against Large-Scale Outages on the Cloud,” Long Wang*, Harigovind V Ramasamy, Richard Harper, Ruchi Mahindru, The Int’l Conference on Dependable Systems and Networks (DSN), Tutorial, Toulouse, France, 2016.<br>
-[26]	“Designing Survivability for Big Data Software-as-a-Service Systems,” Hari Ramasamy, Long Wang, Richard Harper, IEEE International Symposium on Software Reliability Engineering (ISSRE), Tutorial, 2016.<br>
-[27]	“Building and Managing Business Resiliency on the Cloud,” Long Wang*, Richard Harper, Harigovind V Ramasamy, Mahesh Viswanathan, ACM Middleware conference (MIDDLEWARE), Tutorial, Vancouver, Canada, 2015.<br>
-[28]	“Experiences with Building Disaster Recovery for Enterprise-Class Clouds,” Long Wang*, Harigovind V Ramasamy, Richard Harper, Mahesh Viswanathan, E. Plattier, The Int’l Conference on Dependable Systems and Networks (DSN), Rio de Janeiro, Brazil, 2015.<br>
-[29]	“Disaster Recovery for Enterprise-Class Clouds,” Long Wang*, Richard Harper, Harigovind V Ramasamy, Mahesh Viswanathan, The Int’l Conference on Dependable Systems and Networks (DSN), Tutorial, Rio de Janeiro, Brazil, 2015.<br>
-[30]	“Approximate Fault Localization using Message Flow Reconstruction and Targeted Fault Injection,” Cuong Pham, Long Wang*, Byung Chul Tak, Salman Baset, Chunqiang Tang, Zbigniew Kalbarczyk, Ravishankar K. Iyer, USENIX Annual Technical Conference (USENIX), Poster Session, 2014.<br>
-[31]	“CAP3: A Cloud Auto-Provisioning Framework for Parallel Processing Using On-demand and Spot Instances,” He Huang, Liqiang Wang, Byung Chul Tak, Long Wang, Chunqiang Tang, The IEEE Int’l Conference on Cloud Computing (CLOUD), Santa Clara, CA, USA, 2013.<br>
-[32]	“Dissecting Open Source Cloud Evolution: An OpenStack Case Study,” Salman A. Baset, Chunqiang Tang, Byung Chul Tak, Long Wang, 5th USENIX Workshop on Hot Topics in Cloud Computing (HotCloud), San Jose, CA, USA, 2013.<br>
-[33]	“PseudoApp: Performance Prediction for Application Migration to Cloud,” Byung Chul Tak, Chunqiang Tang, Hai Huang, Long Wang, IEEE International Symposium on Integrated Network Management (IM), Ghent, Belgium, 2013.<br>
-[34]	“Universal Script Wrapper – An Innovative Solution for Endpoint Management in Large and Heterogeneous Environments,” Sai Zeng, Shang Guo, Fred Wu, Constantin Adam, Long Wang, Cashchakanithara Venugopal, Rajeev Puri, Ramesh Palakodeti, IEEE International Symposium on Integrated Network Management (IM), Ghent, Belgium, 2013.<br>
-[35]	“Remediating Overload in Over-subscribed Computing Environments,” Long Wang*, Rafah A. Hosn, Chunqiang Tang, The IEEE Int’l Conference on Cloud Computing (CLOUD), Honululu, Hawaii, USA, 2012.<br>
-[36]	“Towards an understanding of oversubscription in cloud,” Salman A. Baset, Long Wang*, Chunqiang Tang, 2nd USENIX Workshop on Hot Topics in Management of Internet, Cloud, and Enterprise Networks and Services (HotICE), San Jose, CA, USA, 2012. <br>
-[37]	“Checkpointing Virtual Machines Against Transient Errors,” Long Wang*, Zbigniew Kalbarczyk, Ravishankar K. Iyer, Arun Iyengar, Proc. Of Int’l On-Line Testing Symposium (IOLTS), Corfu Island, Greece, 2010.<br>
-[38]	“Formalizing System Behavior for Evaluating a System Hang Detector,” Long Wang*, Zbigniew Kalbarczyk, Ravishankar K. Iyer, Proc. of Int'l Symp. on Reliable Distributed Systems (SRDS), Napoli, Italy, 2008.<br>
-[39]	“Count&Check: Counting Instructions to Detect Incorrect Paths,” Long Wang*, Ravishankar K. Iyer, the CATARS Workshop in The Int’l Conference on Dependable Systems and Networks (DSN), Anchorage, Alaska, USA, 2008.<br>
-[40]	“A Model-based Simulation Approach to Error Analysis of IT Services,” Long Wang*, Akhil Sahai, James Pruyne, IFIP/IEEE International Symposium on Integrated Network Management (IM), Munich, Germany, 2007.<br>
-[41]	“An OS-level Framework for Providing Application-Aware Reliability,” Long Wang*, Zbigniew Kalbarczyk, Weining Gu, Ravishankar K. Iyer, Best Paper, IEEE Pacific Rim International Symposium on Dependable Computing (PRDC), Riverside, CA, USA, 2006.<br>
-[42]	“A Self-checking and Reconfigurable Framework for Application Reliability Exploiting Execution Characteristics,” Long Wang*, Zbigniew Kalbarczyk, Weining Gu, Ravishankar K. Iyer, The Int’l Conference on Dependable Systems and Networks (DSN), fast abstract, 2006, Philadelphia, PA, USA.<br>
-[43]	“Modeling Coordinated Checkpointing for Large-Scale Supercomputers,” Long Wang*, Karthik Pattabiraman, Zbigniew Kalbarczyk, Ravishankar K. Iyer, Lawrence Votta, Christopher Vick, Alan Wood, The Int’l Conference on Dependable Systems and Networks (DSN), Yokohama, Japan, 2005.<br>
-[44]	“Checkpointing of Control Structures in Main Memory Database Systems,” Long Wang*, Zbigniew Kalbarczyk, Ravishankar K. Iyer, H. Vora, T. Chahande, The International Conference on Dependable Systems and Networks (DSN), Florence, Italy, 2004.<br>
-[45]	“Group Communication Protocols under Errors,” Claudio Basile, Long Wang, Zbigniew Kalbarczyk, Ravishankar K. Iyer, Proc. of Int'l Symp. on Reliable Distributed Systems (SRDS), Florence, Italy, 2003.<br>
-
-<h2>Patents and Patent Applications Pending</h2>
-1)	POLICY BASED DATA COLLECTION, PROCESSING, AND NEGOTIATION FOR ANALYTICS  4/13/2020   Issued as Patent ZL201610158033.8 in CN, 3/4/2019   Issued as Patent 10223329 in US Status: Issued <br>
-2)	OPTIMIZING SIMULTANEOUS STARTUP OR MODIFICATION OF INTER-DEPENDENT MACHINES WITH SPECIFIED PRIORITIES  10/14/2019 Issued as Patent 10445138 in US, 4/22/2019   Issued as Patent 10268512 in US  2021 Issued as Patent 11030002 in US	Status: Issued<br>
-3)	EXTRACTION OF SYSTEM ADMINISTRATOR ACTIONS TO A WORKFLOW PROVIDING A RESOLUTION TO A SYSTEM ISSUE  1/14/2019   Issued as Patent ZL201610053107.1 in CN, 7/8/2019   Issued as Patent 10346780 in US	Status: Issued<br>
-4)	PATCHING SYSTEMS AND APPLICATIONS IN A VIRTUALIZED ENVIRONMENT  5/20/2019   Issued as Patent 10296320 in US  2021 Issued as Patent 10983778	Status: Issued<br>
-5)	HEURISTIC PROCESS FOR INFERRING RESOURCE DEPENDENCIES FOR RECOVERY PLANNING  4/22/2019   Issued as Patent 10268549 in US 	Status: Issued<br>
-6)	DYNAMIC FACETED SEARCH   3/25/2019   Issued as Patent 10242103 in US	Status: Issued<br>
-7)	STORAGE SYSTEM-BASED REPLICATION FOR DISASTER RECOVERY IN VIRTUALIZED ENVIRONMENTS  3/4/2019   Issued as Patent 10223222 in US	Status: Issued<br>
-8)	BLACK BOX TECHNIQUES FOR DETECTING PERFORMANCE AND AVAILABILITY ISSUES IN VIRTUAL MACHINES  4/2/2018 Issued as Patent 9934061 in US 	Status: Issued<br>
-9)	INJECTING FAULTS AT SELECT EXECUTION POINTS OF DISTRIBUTED APPLICATIONS  10/31/2016  Issued as Patent 9483383 in US	  Status: Issued<br>
-10)	AUTOMATIC GENERATION OF VALIDATORS TO VALIDATE DEPLOYMENT CODE USED FOR CONFIGURING SERVERS   6/26/2017   Issued as Patent 9692653 in US	Status: Issued<br>
-11)	PROVIDING FAULT INJECTION TO CLOUD-PROVISIONED MACHINES   9/4/2017  Issued as Patent 9753826 in US	Status: Issued<br>
-12)	EVALUATING DISTRIBUTED APPLICATION PERFORMANCE IN A NEW ENVIRONMENT  1/22/2018  Issued as Patent ZL201310627208.1 in CN, 4/2/2018  Issued as Patent 9934054 in US	Status: Issued<br>
-13)	SECURITY POLICY GENERATION BASED ON SNAPSHOTS OF SIMILAR VIRTUAL MACHINES   2/6/2017   Issued as Patent 9563777 in US, 10/23/2017   Issued as Patent 9798885 in US	Status: Issued<br>
-14)	SELECTED VIRTUAL MACHINE REPLICATION AND VIRTUAL MACHINE RESTART TECHNIQUES  7/4/2019 Issued as Patent ZL201410597262.0 in CN  7/11/2016  Issued as Patent 9389970 in US	Status: Issued<br>
-15)	PRESERVING MANAGEMENT SERVICES WITH DISTRIBUTED METADATA THROUGH THE DISASTER RECOVERY LIFE CYCLE   12/31/2018   Issued as Patent 10169173 in US   1/21/2019   Issued as Patent 10185637 in US	Status: Issued<br>
-16)	DIAGNOSING DISTRIBUTED APPLICATIONS USING APPLICATION LOGS AND REQUEST PROCESSING PATHS   10/27/2015  Issued as Patent 9170873 in US, 6/29/2015  Issued as Patent 9069668 in US, 	Status: Issued<br>
-17)	REMEDIATING RESOURCE OVERLOAD   8/2/2016   Issued as Patent ZL201310139393.X in CN, 9/15/2014   Issued as Patent 8839243 in US	Status: Issued<br>
-18)	DATABASE OPTIMIZED DISASTER RECOVERY TESTING 2021 Issued as Patent 11003523 in US  Status: Issued<br>
-19)	IDENTIFYING PATTERNS OF A SET OF SOFTWARE APPLICATIONS 2020 Issued as Patent 10621154 in US	Status: Issued<br>
-20)	RETENTION RULE COMPLIANCE OF RECORD DELETION BASED ON DELETION LOG   Opened as P201808142	Status: Filed<br>
-21)	HARDWARE PLACEMENT AND MAINTENANCE SCHEDULING IN HIGH AVAILABILITY SYSTEMS    Opened as P201801819US01_154-011	Status: Filed<br>
-22)	DATABASE OPTIMIZED DISASTER RECOVERY ORCHESTRATOR     Status: Filed<br>
-23)	SYSTEM AND METHOD TO OPTIMIZE DR TESTING USING BLOCKCHAIN TECHNOLOGY1/30/2017 Opened as Discl POU820170044	Status: Filed<br>
-24)	OPTIMIZING SIMULTANEOUS RECOVERY OF INTER-DEPENDENT MACHINES WITH SPECIFIED PRIORITIES 6/22/2016 Opened as Discl YOR820160507	Status: Filed<br>
-25)	SYSTEM AND METHOD FOR IMPROVED ERGONOMIC CHAIR USING ERGONOMIC-DATA CLASSIFICATION AND COGNITION, ANALYTICS, AND LEARNING  5/26/2015 Opened as Discl YOR820150669	Status: Published<br>
-26)	AN ELECTRONIC METHOD FOR BUILDING A SECURED MANAGEMENT ENVIRONMENT FOR SHARED CLOUD DISASTER RECOVERY  9/15/2014 Opened as Discl END820140462	Status: Published<br>
-27)	A METHOD AND APPARATUS TO AUTOMATE DISASTER RECOVERY IN VIRTUAL ENVIRONMENTS USING A DISASTER RECOVERY ORCHESTRATOR  5/8/2014 Opened as Discl YOR820140425	Status: Published<br>
-28)	DERIVATION OF PROBLEM AND FIX SIGNATURES (SECURITY POLICY) BY ANALYZING SEQUENCES OF SNAPSHOTS OF SIMILAR VMS AFTER INITIAL PROBLEM DETECTION  3/28/2013 Opened as Discl YOR820130420	Status: Filed<br>
-29)	METHOD AND SYSTEM FOR COGNITIVE CLOSET  12/8/2016 Opened as Discl YOR820162892   Status: Published<br>
-30)	METHOD AND SYSTEM FOR PERFORMING CONTINUOUS VERIFICATION OF MULTI-TIERED APPLICATIONS AND MULTI-LAYERED SOFTWARE, AND MODELING CLOUD BEHAVIOR  6/4/2014 Opened as Discl YOR820140473	Status: Filed<br>
-
-	 
- </div>
- 
- <div class='hidden_desc' id="page3_desc">
- <h2>Students</h2>
-07/2021 ~ current 	Chang Liu (PhD)<br>
-07/2021 ~ current 	Yang Zhang (Master)<br>
-03/2021 ~ current 	Yinqin Zhao (PhD)<br>
-01/2017 ~ 07/2020 	Yong Yang (PhD)<br>
-01/2017 ~ 07/2019 	Jing Gu (Master)<br>
-05/2017 ~ 08/2018 	Sharif Rahman (Master)<br>
-08/2016 ~ 05/2018	Siyang Lu (PhD)<br>
-05/2015 ~ 09/2015 	Shiva S Ramdeen (Master)<br>
-05/2014 ~ 12/2015	Cuong Pham (PhD)<br>
-10/2014 ~ 08/2015 	XiaoYong Yuan (Master)<br>
-
- </div>
- 
- <div class='hidden_desc' id="page4_desc">
-  <h2>Courses</h2>
-•	ECE 592 	"Cloud Resiliency"		July 2017 ~ December 2017	North Carolina State University, NC, USA <br>
-•	ECE 592 	"Cloud Resiliency"		July 2016 ~ December 2016	North Carolina State University, NC, USA <br>
-
- </div>
-	
- <div class='hidden_desc' id="page5_desc">
-  <h2>Software</h2>
-
- </div>
-	
- <div class='hidden_desc' id="page6_desc">
-  <h2>Activities</h2>
-•	Organizing Committee, IEEE International Symposium on Software Reliability Engineering (ISSRE), 2018 – 2019, 2021 – present. <br>
-•	Program Committee of IEEE International Symposium on Software Reliability Engineering (ISSRE), 2017 – Present.<br>
-•	Program Committee of IEEE Pacific Rim International Symposium on Dependable Computing (PRDC), 2021 – Present.<br>
-•	Program Committee of IEEE Conference on Dependable Systems and Networks (DSN), 2018 – 2020. <br>
-•	Program Committee of International Conference on Information Security and Cryptology (Inscrypt), 2020. <br>
-•	Program Committee of Industry Track, IEEE Conference on Dependable Systems and Networks (DSN), 2016 – 2020.<br>
-•	Program Committee of Industry Track, IEEE International Symposium on Software Reliability Engineering (ISSRE), 2018 – 2019.<br>
-•	Patent Review Panel, IBM T.J. Watson Research Center, 2016 - 2021.<br>
-•	Program Committee of IEEE Workshop on Silicon Errors in Logic – System Effects (SELSE), 2014 – 2020.<br>
-
- </div>
-	
- <div id="page_content">
-  <h2>About Me</h2>
-     I am Long Wang (王龙), a tenured associated professor at Tsinghua University. 
-	 I am leading the REliability And Security Of Networks and Systems 
-	 (<a href="https://reasons-lab.github.io" target="_blank">REASONS</a>) lab. 
-	 My research areas focus on resiliency, security and understanding of systems, services 
-	 and networks, especially when they are complicated, intelligent, autonomous, dynamic 
-	 and/or software-defined. My homepage at Tsinghua University (in Chinese) is 
-	 <a href="https://www.insc.tsinghua.edu.cn/info/1181/1326.htm" target="_blank">here</a>. 
-
-  </div>
- 
-  </div>
+<div id="spMenu"></div>
+<div class="myinner"> 
+<p>The REliability And Security Of Networks and Systems (REASONS) lab led by <a href="https://longwang1.github.io/">Prof. Long Wang</a> is located at Institute for Network Sciences and Cyberspace, Tsinghua University, China. The research focuses of this lab include reliability, security and understanding of systems, services and networks, especially when they are complicated, intelligent, autonomous, dynamic and/or software-defined. Typical research interests are on reliability and security of cloud platforms, big data/AI platforms, and so on. 
+</p>
 </div>
-	
-	
-	
 
+<nav>
+<div class="inner">
+<ul class="gnav"><!--
+			<li><a href="index.html">Top</a></li>
+		-->
+	<li class="subnav"><a href="projects.html">Projects</a>
+	</li>
+	<li class="subnav"><a href="members.html">Members</a>
+		<ul>
+			<li><a href="members.html?id=staff">Staff</a></li>
+			<li><a href="members.html?id=students">Students</a></li>
+		</ul>
+		</li>
+	<li class="subnav"><a href="publications.html">Publications</a>
+		<ul>
+			<li><a href="publications.html?id=journals">Journals and Books</a></li>
+			<li><a href="publications.html?id=confs">Conferences</a></li>
+			<li><a href="publications.html?id=patents">Patents</a></li>
+		</ul>
+	</li>
+	<li class="subnav"><a href="activities.html">Activities</a>
+		<ul>
+			<li><a href="activities.html?id=academic">Academic Services</a></li>
+			<li><a href="activities.html?id=talks">Invited Talks</a></li>
+			<li><a href="activities.html?id=awards">Awards and Fundings</a></li>
+			<li><a href="activities.html?id=jobs">Jobs</a></li>
+		</ul>
+	</li>
+	<!--
+	<li class="subnav"><a href="software.html">Software</a>
+	</li>
+	-->
+</ul>
+</div>
+<!-- /.inner --></nav>
+
+<!-- 
+<div class="slide">
+<ul class="slideInner">
+	<li><a href="index.html"><img alt="1" height="500px" width="700px" src="images/2022_p1.jpg" /></a></li>
+	<li><a href="index.html"><img alt="2" height="500px" width="700px" src="images/2022_p2.jpg" /></a></li>
+	<li><a href="index.html"><img alt="3" height="500px" width="700px" src="images/2022_p3.jpg" /></a></li>
+	<li><a href="index.html"><img alt="4" height="500px" width="700px" src="images/2022_p4.jpg" /></a></li>
+	<li><a href="index.html"><img alt="5" height="500px" width="700px" src="images/2022_p5.jpg" /></a></li>
+	<li><a href="index.html"><img alt="6" height="500px" width="700px" src="images/2022_p6.jpg" /></a></li>
+	<li><a href="index.html"><img alt="7" height="500px" width="700px" src="images/2022_p7.jpg" /></a></li>
+	<li><a href="index.html"><img alt="8" height="500px" width="700px" src="images/2022_p8.jpg" /></a></li>
+	<li><a href="index.html"><img alt="9" height="500px" width="700px" src="images/2022_p9.jpg" /></a></li>
+</ul>
+
+<div class="slidePrev"><img alt="previous" src="images/nav_prev.png" /></div>
+
+<div class="slideNext"><img alt="next" src="images/nav_next.png" /></div>
+
+<div class="controlNav"></div>
+</div> -->
+<!-- /.slide -->
+
+
+<div id="contents"> 
+<h2 id="news">News</h2>
+
+<dl class="info">
+    <dt><span> Jan. 2022: Jinnan joins our lab. Welcome, Jinnan! </span></dt>
+    <dt><span> Jan. 2022: Our paper "Transparently Capturing Request Execution Path for Understanding Service Behavior and Detecting Anomalies" was accepted by IEEE Transactions on Service Computing (TSC). </span></dt>
+    <dt><span> Dec. 2021: Prof. Wang received National Talent Award（入选国家级人才计划）. </span></dt>
+	<dt><span> Dec. 2021: Xingjian won scholarship in The Tsinghua University Capture-The-Flag (THUCTF) Competition (top 22%). Well done, Xingjian!</span></dt>
+    <dt><span> Nov. 2021: We will host IEEE Pacific Rim International Symposium on Dependable Computing (PRDC) 2022 conference at Tsinghua University. Prof. Wang serves as General Chair of IEEE PRDC 2022. </span></dt>
+	<dt><span> Nov. 2021: Xingjian joined our lab. Welcome, Xingjian!</span></dt>
+	<dt><span> Nov. 2021: The NSFC funding proposal "Core Mechanisms of New Generation Internet Architecture that Supports Multi-Objective Forms" that we participate was granted. </span></dt>
+	<dt><span> Nov. 2021: Prof. Wang was invited to give a talk "Dependable Computing in Enterprise-Class Clouds" to Central Research Institute of Huawei and Huawei Cloud Department. </span></dt>
+	<dt><span> Oct. 2021: Prof. Wang was appointed as expert of Ministry of Industry and Information Technology, China （入选工信部专家库）. </span></dt>
+	<dt><span> Sep. 2021: Our funding proposal "Pseudo-code Representation of Cloud Service Dependencies and Analysis Based on the Representation" to Huawei Corporation was granted. </span></dt>
+	<dt><span> Aug. 2021: Prof. Wang was invited to give a talk "Providing Dependability to Critical Computing Systems – & Advice to Fresh Graduate Students" to 2021 fresh graduate students of Institute of Network Sciences and Cyberspace (INSC), Tsinghua University. </span></dt>
+	<dt><span> Jun. 2021: Chang got a summer internship in Tencent Corporation. Congratulations, Chang!</span></dt>
+    <dt><span> Jun. 2021: Yang completed Bachelor Thesis "A Novel Text Generation Model Based on Graph Network and Sequential Model", and started her Master program in this lab. </span></dt>
+    <dt><span> Jun. 2021: Yinqin completed Bachelor Thesis "Dynamic Behavior Monitoring System of Software Defined Network", and started his PhD program in this lab. </span></dt>
+ 	<dt><span> May 2021: Prof. Wang was invited to give a talk "Recovering Datastore and Providing Data Consistency for Big Data Software-as-a-Service Systems" at the 2021 THU-USC Faculty Research Symposium. </span></dt>
+    <dt><span> May 2021: Chang joined our lab and started his PhD program here. Welcome, Chang!</span></dt>
+	<dt><span> Apr. 2021: Our paper "Iteratively Checking Program Properties Involving Non-Boolean Values" was accepted by The International Conference on Dependable Systems and Networks (DSN), Fast Abstract, 2021. </span></dt>
+	<dt><span> Apr. 2021: Yang joined our lab. Welcome, Yang!</span></dt>
+	<dt><span> Apr. 2021: Prof. Wang served as Program Committee of IEEE Pacific Rim International Symposium on Dependable Computing (PRDC) 2021. </span></dt>
+	<dt><span> Apr. 2021: Prof. Wang was invited to give a talk "Designing Resiliency for Enterprise-Class Clouds" at Institute of Network Sciences and Cyberspace (INSC), Tsinghua University. </span></dt>
+	<dt><span> Mar. 2021: Yinqin joined our lab. Welcome, Yinqin!</span></dt>
+	<dt><span> Feb. 2021: Prof. Wang served as Fast Abstract co-Chair and Research Track Program Committee of IEEE International Symposium on Software Reliability Engineering (ISSRE) 2021. </span></dt>
+	<!-- <dt><span>20XX-01-01</span></dt>
+			<dd>
+				 bra bra
+			</dd>   -->
+</dl>
+
+<dl class="info">
+</dl>
+
+</div>
+<!-- /#contents -->
+
+<footer><!--
+	<div class="footmenu">
+		<ul>
+			<li><a href="index.html">Top</a></li>
+			<li><a href="http://photo.sanographix.net/" target="_blank">Photo by sanographix</a></li>
+		</ul>
+	</div>--><!-- /.footmenu -->
+<div class="copyright">Copyright &copy; REASONS Lab <!--	<a href="http://photo.sanographix.net/" target="_blank">Photo by sanographix</a> --><!-- /.copyright --></div>
+</footer>
 </body>
 </html>
