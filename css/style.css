@@ -189,20 +189,20 @@ table {
 	width:100%;
 	margin-bottom:1em;
 	border-collapse:collapse;
-	border:1px solid #ddd;
+	/* border:1px solid #ddd; */
 	background:#fff;
 }
 th {
 	padding:10px;
 	text-align:center;
 	vertical-align:middle;
-	border:1px solid #ddd;
-	background:#eee;
+	/* border:1px solid #ddd;
+	background:#eee; */
 }
 td {
 	padding:10px;
 	text-align:left;
-	border:1px solid #ddd;
+	/* border:1px solid #ddd; */
 }
 
 /*================================================
